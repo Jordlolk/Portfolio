@@ -1,0 +1,124 @@
+.header{
+  width: 100%;
+  font-family: "Oswald", sans-serif;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  display: flex;
+}
+
+.navBar{
+  width: 100vw;
+  background-color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.darthIcon{
+  background-color: var(--darkside);
+  border-radius: 50%;
+  margin: 8px;
+  animation: darkside 4s infinite;
+  width: fit-content;
+}
+
+.darthIcon img{
+  padding: 8px;
+  width: 14vw;
+  min-width: 55px;
+  max-width: 60px;
+  height: auto;
+}
+
+.list{
+  text-transform: uppercase;
+  list-style: none;
+  color: var(--white);
+  width: 40%;
+  min-width: 390px;
+  max-width: 400px;
+}
+
+.list li{
+  padding: 12px;
+  transition: 200ms ease-in-out;
+}
+
+.list li:hover{
+  animation: textMenuEffect 2s infinite;
+}
+.list li:last-child{
+  margin-left: auto;
+}
+
+.menu-button img{
+  width: 100%;
+  margin: auto;
+  height: auto;
+}
+
+@keyframes textMenuEffect{
+  0% {
+    text-shadow: 1px 0px 10px var(--blueside);
+  }
+  50% {
+    text-shadow: 1px 0px 10px var(--darkside);
+  }
+  100% {
+    text-shadow: 1px 0px 10px var(--blueside);
+  }
+}
+@keyframes darkside{
+  0% {
+    background-color: var(--blueside);
+  }
+  50% {
+    background-color: var(--darkside);
+    box-shadow: 0px 0px 20px var(--darkside);
+  }
+  100% {
+    background-color: var(--blueside);
+  }
+}
+@keyframes blueside{
+  0% {
+    box-shadow: 0px 0px 0px var(--blueside);
+  }
+  50% {
+    box-shadow: 0px 0px 20px var(--blueside);
+  }
+  100% {
+    box-shadow: 0px 0px 0px var(--blueside);
+  }
+}
+
+@media (max-width: 700px){
+  .list {
+    display: none;
+  }
+
+  .menu-button {
+    animation: blueside 4s infinite;
+    text-align: center;
+    display: block;
+    height: auto;
+    border-radius: 40px;
+    border: 0px solid;
+    margin: 8px;
+    background-color: var(--blueside);
+    padding: 8px;
+    width: 14vw;
+    min-width: 55px;
+    max-width: 60px;
+  }
+}
+
+@media (min-width: 701px) {
+  .list {
+    display: flex;
+  }
+
+  .menu-button {
+    display: none;
+  }
+}

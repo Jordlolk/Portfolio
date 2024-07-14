@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root{
+  --white: rgb(240, 240, 240);
+  --black: rgb(19, 19, 19);
+  --gray: rgb(58, 58, 58);
+  --darkside: rgb(247, 0, 0);
+  --gold: yellow;
+  --blueside: rgb(73, 191, 255);
+}
