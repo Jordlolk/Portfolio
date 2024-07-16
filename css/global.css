@@ -4,11 +4,36 @@
   margin: 0;
 }
 
-:root{
+body {
+  font-size: 16px;
+  background-color: var(--black);
+}
+
+:root {
   --white: rgb(240, 240, 240);
   --black: rgb(19, 19, 19);
   --gray: rgb(58, 58, 58);
   --darkside: rgb(247, 0, 0);
   --gold: yellow;
   --blueside: rgb(73, 191, 255);
+}
+
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+span {
+  color: var(--white);
+  font-family: monospace;
+}
+
+a {
+  font-family: "Courier New", Courier, monospace;
+}
+
+main {
+  height: 100vw;
+  background-color: var(--black);
 }

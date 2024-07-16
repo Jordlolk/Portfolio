@@ -1,7 +1,6 @@
-.header{
+.header {
   width: 100%;
-  font-family: "Oswald", sans-serif;
-  font-weight: bolder;
+  font-weight: 700;
   letter-spacing: 2px;
   display: flex;
 }
@@ -11,10 +10,10 @@
   background-color: var(--black);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
-.darthIcon{
+.darthIcon {
   background-color: var(--darkside);
   border-radius: 50%;
   margin: 8px;
@@ -22,7 +21,7 @@
   width: fit-content;
 }
 
-.darthIcon img{
+.darthIcon img {
   padding: 8px;
   width: 14vw;
   min-width: 55px;
@@ -30,45 +29,77 @@
   height: auto;
 }
 
-.list{
+.list {
   text-transform: uppercase;
   list-style: none;
   color: var(--white);
-  width: 40%;
-  min-width: 390px;
+  width: 50%;
+  gap: 18px;
+  min-width: 300px;
   max-width: 400px;
 }
 
-.list li{
-  padding: 12px;
+.list li a {
+  padding: 2px;
+  color: var(--gold);
+  transition: 200ms ease-in-out;
+  position: relative;
+  text-decoration: none;
+}
+
+.list li:nth-child(1) a::after {
+  background-color: var(--darkside);
+}
+
+.list li:nth-child(2) a::after {
+  background-color: var(--blueside);
+}
+
+.list li:nth-child(3) a::after {
+  background-color: var(--gold);
+}
+
+.list li a::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
   transition: 200ms ease-in-out;
 }
 
-.list li:hover{
-  animation: textMenuEffect 2s infinite;
+.list li a:hover::after {
+  width: 98%;
 }
-.list li:last-child{
+
+.list li:hover {
+  animation: textMenuEffect 4s infinite;
+}
+
+.list li:last-child {
+  color: var(--gold);
   margin-left: auto;
 }
 
-.menu-button img{
+.menu-button img {
   width: 100%;
   margin: auto;
   height: auto;
 }
 
-@keyframes textMenuEffect{
+@keyframes textMenuEffect {
   0% {
-    text-shadow: 1px 0px 10px var(--blueside);
+    text-shadow: -1px 0px 14px var(--blueside);
   }
   50% {
-    text-shadow: 1px 0px 10px var(--darkside);
+    text-shadow: -1px 0px 14px var(--darkside);
   }
   100% {
-    text-shadow: 1px 0px 10px var(--blueside);
+    text-shadow: -1px 0px 14px var(--blueside);
   }
 }
-@keyframes darkside{
+@keyframes darkside {
   0% {
     background-color: var(--blueside);
   }
@@ -80,7 +111,7 @@
     background-color: var(--blueside);
   }
 }
-@keyframes blueside{
+@keyframes blueside {
   0% {
     box-shadow: 0px 0px 0px var(--blueside);
   }
@@ -92,7 +123,7 @@
   }
 }
 
-@media (max-width: 700px){
+@media (max-width: 700px) {
   .list {
     display: none;
   }
