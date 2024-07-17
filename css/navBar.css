@@ -1,13 +1,13 @@
 .header {
   width: 100%;
   font-weight: 700;
-  letter-spacing: 2px;
   display: flex;
 }
 
-.navBar{
-  width: 100vw;
+.navBar {
+  width: 100%;
   background-color: var(--black);
+  margin-top: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -23,9 +23,9 @@
 
 .darthIcon img {
   padding: 8px;
-  width: 14vw;
+  width: 100%;
   min-width: 55px;
-  max-width: 60px;
+  max-width: 75px;
   height: auto;
 }
 
@@ -34,13 +34,21 @@
   list-style: none;
   color: var(--white);
   width: 50%;
-  gap: 18px;
-  min-width: 300px;
-  max-width: 400px;
+  gap: 24px;
+  min-width: 40%;
+  max-width: 40%;
+  li{
+    transition: 200ms ease-in-out;
+  }
+  li:hover{
+    scale: 1.1;
+  }
 }
 
 .list li a {
-  padding: 2px;
+  padding: 4px;
+  border-radius: 10px;
+  font-size: 1em;
   color: var(--gold);
   transition: 200ms ease-in-out;
   position: relative;
@@ -65,16 +73,19 @@
   bottom: 0;
   left: 0;
   width: 0%;
-  height: 2px;
+  height: 3px;
+  min-height: 2px;
+  max-height: 3px;
   transition: 200ms ease-in-out;
 }
 
 .list li a:hover::after {
-  width: 98%;
+  width: 100%;
 }
 
-.list li:hover {
-  animation: textMenuEffect 4s infinite;
+.list li a:hover {
+  
+  animation: textMenuEffect 3s infinite;
 }
 
 .list li:last-child {
@@ -84,19 +95,21 @@
 
 .menu-button img {
   width: 100%;
+  min-width: 50px;
+  max-width: 50px;
   margin: auto;
   height: auto;
 }
 
 @keyframes textMenuEffect {
   0% {
-    text-shadow: -1px 0px 14px var(--blueside);
+    text-shadow: 1px 1px 20px var(--blueside);
   }
   50% {
-    text-shadow: -1px 0px 14px var(--darkside);
+    text-shadow: 1px 0px 12px var(--darkside);
   }
   100% {
-    text-shadow: -1px 0px 14px var(--blueside);
+    text-shadow: 1px 1px 20px var(--blueside);
   }
 }
 @keyframes darkside {
@@ -129,18 +142,13 @@
   }
 
   .menu-button {
-    animation: blueside 4s infinite;
-    text-align: center;
-    display: block;
-    height: auto;
-    border-radius: 40px;
-    border: 0px solid;
-    margin: 8px;
     background-color: var(--blueside);
     padding: 8px;
-    width: 14vw;
-    min-width: 55px;
-    max-width: 60px;
+    border-radius: 50%;
+    border: solid 2px var(--blueside);
+    animation: blueside 4s infinite;
+    width: 100vw;
+    max-width: fit-content;
   }
 }
 

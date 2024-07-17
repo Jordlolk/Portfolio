@@ -6,14 +6,12 @@
   height: auto;
   margin: auto;
   width: fit-content;
-  min-width: 20vw;
-  max-width: 80vw;
   border-radius: 12px;
   padding: 24px;
   background-color: var(--gray);
   margin-top: 4rem;
   h1 {
-    font-size: 1.8em;
+    font-size: 1.4em;
   }
 }
 
@@ -27,26 +25,16 @@
   justify-content: space-around;
 }
 
-.description {
-  height: auto;
+.description,
+.work {
   padding: 8px;
-  border: 2px solid var(--gray);
-  border-radius: 18px;
   background-color: var(--black);
+  border: solid 2px var(--blueside);
+  border-radius: 12px;
   h2 {
     color: var(--gold);
     text-transform: capitalize;
   }
-}
-
-.work {
-  background-color: var(--black);
-  padding: 8px;
-  border: 2px solid var(--gray);
-  h2 {
-    color: var(--gold);
-  }
-  border-radius: 18px;
 }
 
 @keyframes a {
