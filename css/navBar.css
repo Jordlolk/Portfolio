@@ -34,13 +34,13 @@
   list-style: none;
   color: var(--white);
   width: 50%;
-  gap: 24px;
   min-width: 40%;
   max-width: 40%;
-  li{
+  li {
     transition: 200ms ease-in-out;
+    padding: 12px;
   }
-  li:hover{
+  li:hover {
     scale: 1.1;
   }
 }
@@ -84,7 +84,6 @@
 }
 
 .list li a:hover {
-  
   animation: textMenuEffect 3s infinite;
 }
 

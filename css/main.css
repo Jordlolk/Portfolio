@@ -1,18 +1,29 @@
 .main {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
   height: auto;
   margin: auto;
   width: fit-content;
   border-radius: 12px;
   padding: 24px;
-  background-color: var(--gray);
   margin-top: 4rem;
-  h1 {
-    font-size: 1.4em;
+  background: url("/imgs/starrySky.png");
+  background-color: rebeccapurple;
+  background-size: contain;
+  border: 4px solid var(--white);
+  transition: 400ms ease-in-out;
+  div {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
   }
+  h1 {
+    font-size: 1.8em;
+    margin-bottom: 0.4rem;
+  }
+}
+
+.main:hover {
+  box-shadow: 1px 0px 40px var(--white);
 }
 
 .aboutMe {
@@ -31,10 +42,18 @@
   background-color: var(--black);
   border: solid 2px var(--blueside);
   border-radius: 12px;
+  transition: 200ms ease-in-out;
   h2 {
     color: var(--gold);
     text-transform: capitalize;
   }
+}
+
+.description:hover,
+.work:hover {
+  transform: scale(1.1);
+  box-shadow: 1px 0px 20px red;
+  border-color: red;
 }
 
 @keyframes a {
@@ -48,21 +67,88 @@
   }
 }
 
+.aboutMeEvent {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  margin: 2rem auto;
+  padding: 10px;
+  border-radius: 12px;
+  white-space: normal;
+  text-align: start;
+  overflow: hidden;
+  p {
+    font-size: 16px;
+    font-weight: bolder;
+    padding: 12px;
+    text-transform: uppercase;
+  }
+  img {
+    height: auto;
+    width: 150px;
+    margin-top: 1rem;
+    display: block;
+    padding: 12px;
+    border: solid 3px var(--black);
+    border-radius: 50%;
+    animation: de 2s forwards;
+  }
+}
+
+@keyframes de {
+  0% {
+    transform: rotateY(90deg);
+  }
+  50% {
+    transform: rotateY(730deg);
+    box-shadow: 0px 0px 10px var(--darkside);
+    background-image: url(/imgs/starrySky.png);
+    background-size: contain;
+  }
+  100% {
+    transform: rotateY(730deg);
+    box-shadow: -7px 0px 30px var(--darkside);
+    background-image: url(/imgs/starrySky.png);
+    background-size: contain;
+  }
+}
+
 @media (max-width: 700px) {
+  .aboutMeEvent {
+    flex-direction: column-reverse;
+    text-align: justify;
+    line-height: 1.4em;
+  }
   .main {
+    margin-top: 30px;
     h1 {
       padding-bottom: 18px;
-      font-size: 1.4em;
+      font-size: 22px;
     }
   }
+  .work,
   .description {
     h2 {
-      font-size: 1.2em;
+      font-size: 18px;
     }
   }
-  .work {
-    h2 {
-      font-size: 1.2em;
-    }
-  }
+}
+
+/* SCROLL BAR */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 0.1px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, var(--darkside), var(--blueside));
+  border-radius: 10px;
 }
