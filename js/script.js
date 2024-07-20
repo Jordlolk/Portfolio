@@ -1,12 +1,11 @@
-console.log(window.innerWidth);
 
 let KyloImg = document.getElementById('KyloImg')
 function updateImg(mediaQuery){
   let a = window.innerWidth
   if(a <= 623){
-    KyloImg.setAttribute('src' , 'imgs/darthVaderChibi.png')
+    KyloImg.setAttribute('src' , 'imgs/kyloRenChibi.png')
   } else{
-    KyloImg.setAttribute('src' , 'imgs/KyloRen.png')
+    KyloImg.setAttribute('src' , 'imgs/kyloRen.png')
   }
 }
 const mediaQuery = window.matchMedia('(max-width: 623px)');
