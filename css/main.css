@@ -2,7 +2,7 @@
   height: auto;
   margin: auto;
   width: fit-content;
-  border-radius: 12px;
+  border-radius: 34px;
   padding: 24px;
   margin-top: 4rem;
   background-image: url("../imgs/starrySky.png");
@@ -31,7 +31,7 @@
   flex-direction: column;
   text-align: center;
   padding: 10px;
-  gap: 10px;
+  gap: 24px;
   justify-content: space-around;
 }
 
@@ -67,36 +67,44 @@
 }
 
 .aboutMeEvent {
-  width: 90%;
+  width: 74%;
   display: flex;
   flex-direction: row;
   align-items: center;
   position: relative;
   margin: 2rem auto;
-  padding: 10px;
-  border-radius: 12px;
+  padding: 18px;
+  border: solid 4px var(--blueside);
+  box-shadow: 1px 0px 10px var(--blueside);
+  border-radius: 34px;
   white-space: normal;
   text-align: start;
   overflow: hidden;
+  background-color: var(--gray);
   p {
-   
     font-weight: bolder;
     padding: 12px;
     text-transform: uppercase;
+    text-align: justify;
   }
   img {
     height: auto;
-    width: 150px;
+    width: 135px;
     margin-top: 1rem;
     display: block;
     padding: 12px;
-    border: solid 3px var(--black);
+    border: solid 3px var(--darkside);
     border-radius: 50%;
-    animation: de 2s forwards;
+    animation: fliping 4s forwards;
   }
 }
 
-@keyframes de {
+.imgPlaceHolder {
+  height: 160px;
+  width: 140px;
+}
+
+@keyframes fliping {
   0% {
     transform: rotateY(90deg);
   }
@@ -108,13 +116,18 @@
   }
   100% {
     transform: rotateY(730deg);
-    box-shadow: -7px 0px 30px var(--darkside);
+    box-shadow: 0px 0px 30px var(--darkside);
     background-image: url("../imgs/starrySky.png");
     background-size: contain;
+    border: solid 2px red;
   }
 }
 
 @media (max-width: 700px) {
+  .main:hover {
+    box-shadow: none;
+  }
+
   .aboutMeEvent {
     flex-direction: column-reverse;
     text-align: justify;
