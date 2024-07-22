@@ -71,7 +71,6 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  position: relative;
   margin: 2rem auto;
   padding: 18px;
   border: solid 4px var(--blueside);
@@ -79,7 +78,6 @@
   border-radius: 34px;
   white-space: normal;
   text-align: start;
-  overflow: hidden;
   background-color: var(--gray);
   p {
     font-weight: bolder;
@@ -105,6 +103,96 @@
   width: 140px;
 }
 
+.workEvent {
+  width: 74%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
+  padding: 18px;
+  border: solid 4px var(--darkside);
+  box-shadow: 1px 0px 20px var(--darkside);
+  border-radius: 34px;
+  text-align: start;
+  background-color: var(--gray);
+  img {
+    height: auto;
+    width: 100px;
+  }
+  .tecnologies {
+    list-style: none;
+    width: 80%;
+    position: relative;
+    display: flex;
+    padding: 8px;
+    background: linear-gradient(90deg, var(--black) 15%, var(--black) 100%);
+    -webkit-mask-image: linear-gradient(
+      90deg,
+      transparent,
+      var(--white) 20%,
+      var(--white) 80%,
+      transparent
+    );
+    gap: 3rem;
+  }
+  .types {
+    white-space: no-wrap;
+    width: 50%;
+    animation: passTecnologies 10s linear infinite;
+    animation-delay: 1s;
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .types:nth-child(2) {
+    animation: passTecnologies2 12s linear infinite;
+    animation-delay: 1s;
+  }
+  .types a {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding: 10px;
+    background-color: var(--black);
+    border: solid 2px var(--blueside);
+    border-radius: 8px;
+    transition: 400ms ease-in-out;
+    animation: ligths 4s linear infinite;
+  }
+
+  .types a:hover {
+    scale: 1.1;
+  }
+}
+@keyframes ligths {
+  0% {
+    box-shadow: 1px 0px 10px var(--blueside);
+  }
+  50% {
+    box-shadow: 1px 0px 10px transparent;
+  }
+  100% {
+    box-shadow: 1px 0px 10px var(--blueside);
+  }
+}
+@keyframes passTecnologies {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+@keyframes passTecnologies2 {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(-280%);
+  }
+}
 @keyframes fliping {
   0% {
     transform: rotateY(90deg);
