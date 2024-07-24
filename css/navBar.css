@@ -6,7 +6,7 @@
 
 .navBar {
   width: 100%;
-  background-color: var(--black);
+  background-color: transparent;
   margin-top: 1rem;
   display: flex;
   align-items: center;
@@ -14,7 +14,6 @@
 }
 
 .darthIcon {
-  background-color: var(--darkside);
   border-radius: 50%;
   margin: 8px;
   animation: darkside 4s infinite;
@@ -35,11 +34,11 @@
   list-style: none;
   color: var(--white);
   width: 40%;
+  gap: 2rem;
   min-width: 20%;
   max-width: 40%;
   li {
     transition: 200ms ease-in-out;
-    padding: 12px;
   }
   li:hover {
     scale: 1.1;
@@ -50,7 +49,7 @@
     bottom: 0;
     left: 0;
     width: 0%;
-    height: 3px;
+    height: var(--bordersWidth);
     min-height: 2px;
     max-height: 3px;
     transition: 200ms ease-in-out;
@@ -110,6 +109,7 @@
     text-shadow: 1px 1px 20px var(--blueside);
   }
 }
+
 @keyframes darkside {
   0% {
     background-color: var(--blueside);
@@ -122,6 +122,7 @@
     background-color: var(--blueside);
   }
 }
+
 @keyframes blueside {
   0% {
     box-shadow: 0px 0px 0px var(--blueside);
@@ -143,7 +144,7 @@
     background-color: var(--blueside);
     padding: 8px;
     border-radius: 50%;
-    border: solid 2px var(--blueside);
+    border: solid var(--bordersWidth) var(--blueside);
     animation: blueside 4s infinite;
     width: 100vw;
     max-width: fit-content;

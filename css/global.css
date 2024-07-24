@@ -10,11 +10,14 @@ body {
 }
 
 :root {
+  --bordersWidth: 2px;
   --white: rgb(240, 240, 240);
   --black: rgb(19, 19, 19);
+  --greensaber: rgb(12, 210, 12);
   --gray: rgb(34, 34, 34);
   --darkside: rgb(247, 0, 0);
   --gold: yellow;
+  --lava: rgb(255, 119, 0);
   --blueside: rgb(73, 191, 255);
 }
 
