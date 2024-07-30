@@ -1,7 +1,7 @@
 .main {
   height: auto;
   margin: auto;
-  width: fit-content;
+  width: 50%;
   border-radius: 34px;
   padding: 24px;
   margin-top: 4rem;
@@ -9,11 +9,14 @@
   background-size: contain;
   border: var(--bordersWidth) solid var(--white);
   transition: 400ms ease-in-out;
+  display: flex;
+  justify-content: center;
   div {
+    width: fit-content;
     display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
-    flex-direction: column;
   }
   h1 {
     font-size: 1.8em;
@@ -28,7 +31,8 @@
 .aboutMe {
   width: fit-content;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
   text-align: center;
   padding: 10px;
   gap: 24px;
@@ -37,12 +41,12 @@
 
 .description,
 .work {
-  padding: 8px;
+  padding: 12px;
   background-color: var(--black);
   border: solid var(--bordersWidth) var(--blueside);
   border-radius: 12px;
   transition: 200ms ease-in-out;
-  h2 {
+  h3 {
     color: var(--gold);
     text-transform: capitalize;
   }
@@ -230,6 +234,7 @@
   text-shadow: 1px 0px 8px var(--5);
 }
 
+/* End of technologies */
 @keyframes ligths {
   0% {
     box-shadow: 1px 0px 10px var(--blueside);
@@ -280,7 +285,7 @@
   }
   .work,
   .description {
-    h2 {
+    h3{
       font-size: 18px;
     }
   }
