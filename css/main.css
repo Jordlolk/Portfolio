@@ -1,4 +1,66 @@
-.main {
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+@keyframes firstR2d2Moving {
+  0% {
+    transform: translateX(-13vw);
+    border-radius: 0px;
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+.firstText {
+  max-width: 80%;
+  min-width: 80%;
+  align-items: center;
+  text-align: center;
+  margin-top: 6rem;
+  position: relative;
+  img {
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: -6em;
+    border-radius: 18px;
+
+    height: auto;
+    width: 5em;
+    animation: firstR2d2Moving 8s linear infinite;
+  }
+  strong {
+    animation: jord 4s infinite;
+    transition: 200ms ease-in-out;
+  }
+}
+
+.firstText h1 {
+  width: 100%;
+  font-size: 1.4em;
+  font-family: monospace;
+  text-transform: uppercase;
+  font-weight: bolder;
+  padding: 12px;
+  letter-spacing: 0.2em;
+}
+@keyframes jord {
+  0% {
+    color: var(--darkside);
+  }
+  50% {
+    color: var(--blueside);
+  }
+  100% {
+    color: var(--darkside);
+  }
+}
+
+.menus-bottom {
   height: auto;
   margin: auto;
   width: 50%;
@@ -11,6 +73,7 @@
   transition: 400ms ease-in-out;
   display: flex;
   justify-content: center;
+  align-items: center;
   div {
     width: fit-content;
     display: flex;
@@ -18,13 +81,13 @@
     align-items: center;
     text-align: center;
   }
-  h1 {
-    font-size: 1.8em;
+  h2 {
+    text-transform: uppercase;
     margin-bottom: 0.4rem;
   }
 }
 
-.main:hover {
+.menus-bottom:hover {
   box-shadow: 1px 0px 40px var(--white);
 }
 
@@ -48,7 +111,7 @@
   transition: 200ms ease-in-out;
   h3 {
     color: var(--gold);
-    text-transform: capitalize;
+    text-transform: uppercase;
   }
 }
 
@@ -57,17 +120,6 @@
   transform: scale(1.1);
   box-shadow: 1px 0px 20px red;
   border-color: red;
-}
-
-@keyframes a {
-  0% {
-    border-radius: 0%;
-    height: 6vh;
-  }
-  100% {
-    border-radius: 4%;
-    height: 40vh;
-  }
 }
 
 .aboutMeEvent {
@@ -123,8 +175,8 @@
   .imgPlaceHolder2 {
     z-index: -1;
     position: absolute;
-    left: 0;
-    top: -4em;
+    left: 10px;
+    top: -5em;
     height: 8em;
     width: fit-content;
   }
@@ -267,7 +319,7 @@
 }
 
 @media (max-width: 700px) {
-  .main:hover {
+  .menus-bottom:hover {
     box-shadow: none;
   }
 
@@ -276,7 +328,7 @@
     text-align: justify;
     line-height: 1.4em;
   }
-  .main {
+  .menus-bottom {
     margin-top: 30px;
     h1 {
       padding-bottom: 18px;
@@ -285,7 +337,7 @@
   }
   .work,
   .description {
-    h3{
+    h3 {
       font-size: 18px;
     }
   }

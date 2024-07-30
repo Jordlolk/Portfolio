@@ -37,6 +37,7 @@
   width: 100%;
   justify-content: space-evenly;
   margin-top: 2em;
+  gap: 2rem;
   li {
     display: flex;
     cursor: pointer;
@@ -70,6 +71,7 @@
   background-size: contain;
   border-radius: 18px;
   padding: 4px;
+  border-color: var(--gold);
   img {
     background-color: var(--gold);
     transform: translateX(134%);
