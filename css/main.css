@@ -20,23 +20,28 @@ main {
   min-width: 80%;
   align-items: center;
   text-align: center;
-  margin-top: 6rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
   position: relative;
   img {
     cursor: pointer;
     position: absolute;
     left: 0;
-    top: -6em;
+    top: -4.4em;
     border-radius: 18px;
-
     height: auto;
-    width: 5em;
+    width: 4em;
     animation: firstR2d2Moving 8s linear infinite;
+    transition: ease-in-out 200ms;
   }
   strong {
     animation: jord 4s infinite;
     transition: 200ms ease-in-out;
   }
+}
+
+.firstText img:hover {
+  opacity: 0.4;
 }
 
 .firstText h1 {
@@ -149,8 +154,28 @@ main {
     display: block;
     padding: 12px;
     border: solid var(--bordersWidth) var(--darkside);
+    box-shadow: 0px 0px 0px var(--darkside);
+    background-image: url("../imgs/starrySky.png");
+    background-size: contain;
     border-radius: 50%;
-    animation: fliping 4s forwards;
+  }
+}
+
+@keyframes fliping {
+  0% {
+    transform: rotateY(90deg);
+    box-shadow: 0px 0px 0px var(--darkside);
+  }
+  50% {
+    transform: rotateY(730deg);
+  }
+  80% {
+    transform: rotateY(730deg);
+    box-shadow: 0px 0px 30px var(--darkside);
+  }
+  100% {
+    transform: rotateY(730deg);
+    box-shadow: 0px 0px 0px var(--darkside);
   }
 }
 
@@ -183,8 +208,6 @@ main {
   img {
     height: auto;
     width: 200px;
-    /* creating a better animation 
-    animation: walking 4s linear infinite; */
   }
   h2 {
     font-family: "Oswald", sans-serif;
@@ -193,21 +216,6 @@ main {
     letter-spacing: 0.2rem;
   }
 }
-
-/* @keyframes walking {
-  0% {
-    transform: translateX(0px);
-  }
-  50% {
-    transform: translateX(280px);
-  }
-  90% {
-    transform: translateX(480px);
-  }
-  100% {
-    transform: translateX(480px) rotateY(180deg);
-  }
-} */
 
 .tecnologies {
   list-style: none;
@@ -296,25 +304,6 @@ main {
   }
   100% {
     box-shadow: 1px 0px 10px var(--blueside);
-  }
-}
-
-@keyframes fliping {
-  0% {
-    transform: rotateY(90deg);
-  }
-  50% {
-    transform: rotateY(730deg);
-    box-shadow: 0px 0px 10px var(--darkside);
-    background-image: url("../imgs/starrySky.png");
-    background-size: contain;
-  }
-  100% {
-    transform: rotateY(730deg);
-    box-shadow: 0px 0px 30px var(--darkside);
-    background-image: url("../imgs/starrySky.png");
-    background-size: contain;
-    border: solid var(--bordersWidth) red;
   }
 }
 

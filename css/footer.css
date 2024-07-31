@@ -5,12 +5,10 @@
 }
 
 .socials {
-  width: var(--WidthContent);
+  width: 100%;
   padding: 14px;
-  border: var(--bordersWidth) var(--blueside) solid;
+  border-top: var(--bordersWidth) var(--blueside) solid;
   border-bottom: none;
-  border-top-left-radius: 34px;
-  border-top-right-radius: 34px;
   margin: auto;
   background-color: var(--gray);
   text-align: center;
@@ -29,6 +27,14 @@
     display: flex;
     justify-content: space-between;
   }
+}
+
+.socials section p {
+  margin-top: 2rem;
+  font-family: monospace;
+
+  text-transform: uppercase;
+  font-weight: bolder;
 }
 
 .socialsList {

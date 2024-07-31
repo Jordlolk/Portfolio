@@ -1,6 +1,6 @@
-
+let aboutMeButton = document.getElementsByClassName("description")[0]
 let KyloImg = document.getElementById('KyloImg')
-
+console.log(aboutMeButton);
 function updateImg(){
   let windoWidth = window.innerWidth
   
@@ -15,6 +15,13 @@ function updateImg(){
 const mediaQuery = window.matchMedia('(max-width: 623px)');
 mediaQuery.addEventListener('change' , updateImg)
 updateImg()
+
+KyloImg.addEventListener('mouseenter', () => {
+  KyloImg.style.animation = "fliping 2s forwards"
+  setTimeout(() => {  
+    KyloImg.style.animation = "none"
+  }, 3200)
+})
 
 document.addEventListener("DOMContentLoaded" , () => {
   let r2d2Audio = document.getElementById('r2d2Sound')

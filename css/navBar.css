@@ -2,12 +2,34 @@
   width: 100%;
   font-weight: 700;
   display: flex;
+  background-color: var(--gray);
+  border-bottom: var(--bordersWidth) var(--blueside) solid;
+  padding: 8px;
+  img {
+    height: auto;
+    max-width: 44px;
+    padding: 4px;
+  }
+  li img {
+    background-color: var(--white);
+    border-radius: 12px;
+  }
+  div {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    color: var(--white);
+    span {
+      font-family: "Oswald", sans-serif;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
 }
 
 .navBar {
   width: 100%;
   background-color: transparent;
-  margin-top: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -22,7 +44,6 @@
 
 .darthIcon img {
   padding: 8px;
-  width: 100%;
   min-width: 55px;
   max-width: 75px;
   height: auto;
@@ -30,13 +51,12 @@
 
 .list {
   padding: 4px;
+  display: flex;
   text-transform: uppercase;
   list-style: none;
   color: var(--white);
-  width: 40%;
+  width: 30%;
   gap: 2rem;
-  min-width: 20%;
-  max-width: 40%;
   li {
     transition: 200ms ease-in-out;
   }
@@ -81,7 +101,7 @@
   background-color: var(--gold);
 }
 
-.list li a:hover {
+.list li img:hover {
   animation: textMenuEffect 3s infinite;
 }
 
@@ -90,23 +110,15 @@
   margin-left: auto;
 }
 
-.menu-button img {
-  width: 100%;
-  min-width: 50px;
-  max-width: 50px;
-  margin: auto;
-  height: auto;
-}
-
 @keyframes textMenuEffect {
   0% {
-    text-shadow: 1px 1px 20px var(--blueside);
+    box-shadow: 1px -0px 20px var(--blueside);
   }
   50% {
-    text-shadow: 1px 0px 12px var(--darkside);
+    box-shadow: 1px -0px 20px var(--darkside);
   }
   100% {
-    text-shadow: 1px 1px 20px var(--blueside);
+    box-shadow: 1px -0px 20px var(--blueside);
   }
 }
 
@@ -137,26 +149,11 @@
 
 @media (max-width: 700px) {
   .list {
-    display: none;
+    width: fit-content;
   }
-
-  .menu-button {
-    background-color: var(--blueside);
-    padding: 8px;
-    border-radius: 50%;
-    border: solid var(--bordersWidth) var(--blueside);
-    animation: blueside 4s infinite;
-    width: 100vw;
-    max-width: fit-content;
-  }
-}
-
-@media (min-width: 701px) {
-  .list {
-    display: flex;
-  }
-
-  .menu-button {
-    display: none;
+  .header {
+    span {
+      font-size: 20px;
+    }
   }
 }
