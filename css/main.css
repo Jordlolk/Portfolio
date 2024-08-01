@@ -5,6 +5,21 @@ main {
   margin-top: 1rem;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  height: 0.1px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, var(--darkside), var(--blueside));
+  border-radius: 10px;
+}
+
 @keyframes firstR2d2Moving {
   0% {
     transform: translateX(-13vw);
@@ -191,19 +206,19 @@ main {
   align-items: center;
   margin: 6rem auto;
   padding: 18px;
-  position: relative;
   border: solid var(--bordersWidth) var(--blueside);
   box-shadow: 1px 12px 20px var(--blueside);
   border-radius: 34px;
   text-align: start;
   background-color: var(--gray);
+  position: relative;
   .imgPlaceHolder2 {
-    z-index: -1;
-    position: absolute;
     left: 10px;
     top: -5em;
     height: 8em;
     width: fit-content;
+    position: absolute;
+    z-index: -1;
   }
   img {
     height: auto;
@@ -243,7 +258,7 @@ main {
     background-color: var(--black);
   }
 }
-/* editions of all tecnologies with their own colors */
+
 .types a:nth-child(1),
 :nth-child(2),
 :nth-child(7) {
@@ -266,7 +281,7 @@ main {
 .types a:nth-child(8) {
   color: var(--5);
 }
-/* hover effects with specific text-shadow colors */
+
 .types a:hover {
   font-weight: bolder;
 }
@@ -294,7 +309,6 @@ main {
   text-shadow: 1px 0px 8px var(--5);
 }
 
-/* End of technologies */
 @keyframes ligths {
   0% {
     box-shadow: 1px 0px 10px var(--blueside);
@@ -332,19 +346,75 @@ main {
   }
 }
 
-/* SCROLL BAR */
-
-::-webkit-scrollbar {
-  width: 10px;
-  height: 0.1px;
+.menuProjects {
+  box-shadow: 1px 0px 20px var(--blueside);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  gap: 4rem;
+  margin: 4em auto;
+  padding: 30px;
+  background-color: var(--gray);
+  border-radius: 18px;
+  border: var(--bordersWidth) solid var(--blueside);
+  h3{
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 0.2em;
+    font-size: 24px;
+  }
 }
 
-::-webkit-scrollbar-track {
-  background: transparent;
-  border-radius: 10px;
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  background-color: black;
+  width: fit-content;
+  padding: 12px;
+  border-radius: 28px;
+  border: 2px solid var(--gold);
+  box-shadow: -0px 14px 8px black;
+  button{
+    cursor: pointer;
+    padding: 8px;
+    background-color: var(--black);
+    margin: 0em 4em 0em 4em;
+    font-size: 16px;
+    border: var(--bordersWidth) solid var(--gold);
+    border-radius: 8px;
+    transition: 200ms ease-in-out;
+    a{
+      color: var(--gold);
+      font-family: "Oswald";
+      text-transform: uppercase;
+      font-weight: bolder;
+      text-decoration: none;
+      transition: 200ms ease-in-out;
+    }
+  }
+  p{
+    width: 100%;
+    padding: 12px;
+    text-align: justify;
+    font-size: 18px;
+    font-family: sans-serif;
+  }
+  img{
+    height: auto;
+    border: 4px solid var(--gray);
+    border-radius: 20px;
+    width: 400px;
+    margin-top: 1em;
+  }
 }
 
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, var(--darkside), var(--blueside));
-  border-radius: 10px;
+.projects button:hover{
+  border-color: var(--white);
+  a{
+    
+    color: var(--blueside);
+  }
 }
