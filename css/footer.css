@@ -47,7 +47,7 @@
   li {
     display: flex;
     cursor: pointer;
-    background-color: var(--black);
+    background-color: var(--gray);
     border-radius: 18px;
     align-items: center;
     width: 180px;

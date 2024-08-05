@@ -5,6 +5,7 @@
   background-color: var(--gray);
   border-bottom: var(--bordersWidth) var(--blueside) solid;
   padding: 8px;
+  
   img {
     height: auto;
     max-width: 44px;
@@ -29,6 +30,7 @@
 
 .navBar {
   width: 100%;
+  gap: 1em;
   background-color: transparent;
   display: flex;
   align-items: center;
@@ -148,6 +150,9 @@
 }
 
 @media (max-width: 700px) {
+  .navBar{
+    flex-direction: column;
+  }
   .list {
     width: fit-content;
   }

@@ -1,6 +1,7 @@
 let aboutMeButton = document.getElementsByClassName("description")[0]
 let KyloImg = document.getElementById('KyloImg')
-console.log(aboutMeButton);
+let imgsProjects = document.querySelectorAll("[data-imgsProject='imgs']")
+
 function updateImg(){
   let windoWidth = window.innerWidth
   
@@ -28,5 +29,17 @@ document.addEventListener("DOMContentLoaded" , () => {
   let soundImg = document.getElementById('soundImg')
   soundImg.addEventListener('click', () => {
      r2d2Audio.play()
+  })
+})
+
+console.log(imgsProjects);
+let links = [
+"https://league-of-filter.vercel.app/",
+"https://jordlolk.github.io/Music-player/",
+""]
+imgsProjects.forEach((imgs) => {
+  imgs.addEventListener("click", () => {
+      
+
   })
 })

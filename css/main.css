@@ -1,3 +1,32 @@
+@media (max-width: 700px) {
+  .menus-bottom:hover {
+    box-shadow: none;
+  }
+
+  .menus-bottom {
+    margin-top: 30px;
+    h1 {
+      padding-bottom: 18px;
+      font-size: 22px;
+    }
+  }
+
+  .work,
+  .description {
+    h3 {
+      font-size: 18px;
+    }
+  }
+
+  .menuProjects {
+    width: 90%;
+  }
+
+  .projects {
+    flex-direction: column;
+  }
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -22,21 +51,28 @@ main {
 
 @keyframes firstR2d2Moving {
   0% {
-    transform: translateX(-13vw);
+    opacity: 0;
+    transform: translateX(0vw);
     border-radius: 0px;
   }
+  20% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(74vw);
+    opacity: 0;
+  }
   100% {
-    transform: translateX(100vw);
+    height: 0;
   }
 }
 
 .firstText {
-  max-width: 80%;
-  min-width: 80%;
+  width: 80%;
   align-items: center;
   text-align: center;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin-top: 4.4rem;
+  margin-bottom: 6rem;
   position: relative;
   img {
     cursor: pointer;
@@ -145,28 +181,27 @@ main {
 .aboutMeEvent {
   width: 74%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
   align-items: center;
   margin: 2rem auto;
-  padding: 18px;
+  padding: 8px;
   border: solid var(--bordersWidth) var(--blueside);
   box-shadow: 1px 0px 10px var(--blueside);
   border-radius: 34px;
-  white-space: normal;
   text-align: start;
   background-color: var(--gray);
+  position: relative;
   p {
     font-weight: bolder;
-    padding: 12px;
+    padding: 20px;
     text-transform: uppercase;
     text-align: justify;
     line-height: 1.8em;
   }
   img {
     height: auto;
-    width: 135px;
+    width: 100px;
     margin-top: 1rem;
-    display: block;
     padding: 12px;
     border: solid var(--bordersWidth) var(--darkside);
     box-shadow: 0px 0px 0px var(--darkside);
@@ -174,6 +209,11 @@ main {
     background-size: contain;
     border-radius: 50%;
   }
+}
+
+.imgPlaceHolder {
+  position: absolute;
+  top: -6rem;
 }
 
 @keyframes fliping {
@@ -192,11 +232,6 @@ main {
     transform: rotateY(730deg);
     box-shadow: 0px 0px 0px var(--darkside);
   }
-}
-
-.imgPlaceHolder {
-  height: 160px;
-  width: 140px;
 }
 
 .workEvent {
@@ -232,12 +267,11 @@ main {
   }
 }
 
-.tecnologies {
+.technologies {
   list-style: none;
   width: fit-content;
   display: flex;
   flex-direction: row;
-  padding: 8px;
 }
 
 .types {
@@ -321,44 +355,15 @@ main {
   }
 }
 
-@media (max-width: 700px) {
-  .menus-bottom:hover {
-    box-shadow: none;
-  }
-
-  .aboutMeEvent {
-    flex-direction: column-reverse;
-    text-align: justify;
-    line-height: 1.4em;
-  }
-  .menus-bottom {
-    margin-top: 30px;
-    h1 {
-      padding-bottom: 18px;
-      font-size: 22px;
-    }
-  }
-  .work,
-  .description {
-    h3 {
-      font-size: 18px;
-    }
-  }
-}
-
 .menuProjects {
-  box-shadow: 1px 0px 20px var(--blueside);
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%;
-  gap: 4rem;
   margin: 4em auto;
-  padding: 30px;
-  background-color: var(--gray);
+  padding: 28px;
+  gap: 4em;
   border-radius: 18px;
-  border: var(--bordersWidth) solid var(--blueside);
-  h3{
+  h3 {
     text-transform: uppercase;
     font-family: "Oswald", sans-serif;
     letter-spacing: 0.2em;
@@ -368,25 +373,27 @@ main {
 
 .projects {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 1em;
-  background-color: black;
-  width: fit-content;
+  gap: 2em;
+  background-color: var(--black);
   padding: 12px;
   border-radius: 28px;
   border: 2px solid var(--gold);
-  box-shadow: -0px 14px 8px black;
-  button{
+  box-shadow: -0px 14px 8px var(--black);
+  div {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+  button {
     cursor: pointer;
     padding: 8px;
     background-color: var(--black);
-    margin: 0em 4em 0em 4em;
-    font-size: 16px;
+    font-size: 14px;
     border: var(--bordersWidth) solid var(--gold);
     border-radius: 8px;
     transition: 200ms ease-in-out;
-    a{
+    a {
       color: var(--gold);
       font-family: "Oswald";
       text-transform: uppercase;
@@ -395,26 +402,40 @@ main {
       transition: 200ms ease-in-out;
     }
   }
-  p{
+  p {
+    line-height: 2rem;
     width: 100%;
-    padding: 12px;
     text-align: justify;
-    font-size: 18px;
+    font-size: 15px;
     font-family: sans-serif;
+    color: var(--white);
   }
-  img{
+  img {
+    cursor: pointer;
     height: auto;
     border: 4px solid var(--gray);
     border-radius: 20px;
-    width: 400px;
+    width: 100%;
     margin-top: 1em;
+    transition: 200ms ease-in-out;
   }
 }
 
-.projects button:hover{
+.projects img:hover{
+  opacity: 0.4;
   border-color: var(--white);
-  a{
-    
+}
+
+.projects button:hover {
+  border-color: var(--white);
+  a {
     color: var(--blueside);
   }
+}
+
+.cardContent {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
 }
